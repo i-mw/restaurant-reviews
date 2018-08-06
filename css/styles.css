@@ -372,11 +372,11 @@ nav h1 a {
   border-bottom-left-radius: 40px;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 40px; 
   position: relative;
   width: 85%;
 }
