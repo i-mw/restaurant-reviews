@@ -86,6 +86,7 @@ initMap = () => {
     id: 'mapbox.streets'
   }).addTo(newMap);
 
+  document.getElementById('map').setAttribute('tabindex', '-1');
   updateRestaurants();
 }
 /* window.initMap = () => {
@@ -194,6 +195,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     function onClick() {
       window.location.href = marker.options.url;
     }
+    marker._icon.setAttribute('tabindex', '-1');
     self.markers.push(marker);
   });
 

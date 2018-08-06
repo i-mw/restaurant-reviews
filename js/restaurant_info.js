@@ -15,7 +15,7 @@ initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
       console.error(error);
-    } else {      
+    } else {
       self.newMap = L.map('map', {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
@@ -25,11 +25,13 @@ initMap = () => {
         mapboxToken: 'pk.eyJ1IjoiaS1tdyIsImEiOiJjamtnemF3bDQwbmU5M3BxZzhjanRqbWFxIn0.hfHDE2U3ivUvhu-bVOv41g',
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'    
       }).addTo(newMap);
       fillBreadcrumb();
+      
+      document.getElementById('map').setAttribute('tabindex', '-1');
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });

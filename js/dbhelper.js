@@ -164,6 +164,7 @@ class DBHelper {
       url: DBHelper.urlForRestaurant(restaurant)
       })
       marker.addTo(newMap);
+    marker._icon.setAttribute('tabindex', '-1');
     return marker;
   } 
   /* static mapMarkerForRestaurant(restaurant, map) {

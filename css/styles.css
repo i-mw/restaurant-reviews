@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 5px auto red;
+}
+
 body,
 td,
 th,
@@ -181,6 +185,7 @@ nav h1 a {
   width: 200px;
   cursor: pointer;
 }
+
 
 /* ====================== Restaurant Listing ====================== */
 
@@ -462,5 +467,6 @@ nav h1 a {
   #restaurant-container,
   #reviews-container {
     width: 50%;
+    padding-top: 140px;
   }
 }
