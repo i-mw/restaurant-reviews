@@ -162,6 +162,8 @@ createRestaurantHTML = (restaurant) => {
   const imgContainer = document.createElement('div');
   imgContainer.className = 'img-container'; 
   imgContainer.style.backgroundImage = 'url(' + DBHelper.imageUrlForRestaurant(restaurant) + ')';
+  imgContainer.setAttribute('role', 'img');
+  imgContainer.setAttribute('aria-label', 'restaurant-image');
   li.append(imgContainer);
 
   const name = document.createElement('h1');
