@@ -158,7 +158,8 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  
+  li.setAttribute('aria-label', 'restaurant');
+
   const imgContainer = document.createElement('div');
   imgContainer.className = 'img-container'; 
   imgContainer.style.backgroundImage = 'url(' + DBHelper.imageUrlForRestaurant(restaurant) + ')';
